@@ -7,7 +7,7 @@ public class PalindromeService {
         if (Objects.isNull(array) || array.length == 0) {
             return false;
         }
-        for (int i = 0, j = array.length - 1; i < array.length; i++, j--) {
+        for (int i = 0, j = array.length - 1; i < array.length / 2; i++, j--) {
             if (array[i] != array[j]) {
                 return false;
             }
