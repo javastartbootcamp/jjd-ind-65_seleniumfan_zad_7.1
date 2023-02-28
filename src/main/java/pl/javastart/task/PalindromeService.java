@@ -1,9 +1,17 @@
 package pl.javastart.task;
 
-public class PalindromeService {
+import java.util.Objects;
 
-    // nie zmieniaj sygnatury tej metody. Jest ona testowana w PalindromeServiceTest
+public class PalindromeService {
     public boolean isPalindrome(int[] array) {
-        return false;
+        if (Objects.isNull(array) || array.length == 0) {
+            return false;
+        }
+        for (int i = 0, j = array.length - 1; i < array.length / 2; i++, j--) {
+            if (array[i] != array[j]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
